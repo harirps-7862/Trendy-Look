@@ -15,7 +15,6 @@ import com.ecomm.model.UserDetail;
 	 @Autowired
 	 SessionFactory sessionFactory;
 	 
-	 @Override
 	 public boolean registerUser(UserDetail user)
 	 {
 		try
@@ -28,7 +27,6 @@ import com.ecomm.model.UserDetail;
 			return false;
 		}
 	 }
-	 @Override
 	 public boolean addUser(UserDetail user)
 	 {
 		try

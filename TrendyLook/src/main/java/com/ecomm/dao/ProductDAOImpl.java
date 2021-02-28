@@ -15,7 +15,6 @@ public class ProductDAOImpl implements ProductDAO {
 		@Autowired
 	SessionFactory sessionFactory;
 	
-	@Override
 	public boolean addProduct(Product product) {
 		try
 		{
@@ -31,7 +30,6 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
 	public boolean deteteProduct(Product product ) {
 		try
 		{
@@ -46,7 +44,6 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
 	public boolean updateProduct(Product product) {
 		try
 		{
@@ -61,7 +58,6 @@ public class ProductDAOImpl implements ProductDAO {
 		}
 	}
 
-	@Override
 	public  Product getProduct(int productId)	{
 
 		Session session=sessionFactory.openSession();
@@ -70,7 +66,6 @@ public class ProductDAOImpl implements ProductDAO {
 		return product;
 	}
 
-	@Override
 	public List<Product> retrieveProducts()
 	{
 		Session session=sessionFactory.openSession();

@@ -16,7 +16,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	@Override
 	public boolean addCategory(Category category) {
 		try
 		{
@@ -32,7 +31,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 	}
 
-	@Override
 	public boolean deleteCategory(Category category ) {
 		try
 		{
@@ -47,7 +45,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 		}
 	}
 
-	@Override
 	public boolean updateCategory(Category category) {
 		try
 		{
@@ -64,7 +61,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 	
 	
 
-	@Override
 	public  Category getCategory(int categoryId)	{
 
 		Session session=sessionFactory.openSession();
@@ -73,7 +69,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 		return category;
 	}
 
-	@Override
 	public List<Category> retrieveCategories()
 	{
 		Session session=sessionFactory.openSession();

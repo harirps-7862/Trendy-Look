@@ -19,7 +19,6 @@ public class CartDAOImpl implements CartDAO
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	@Override
 	public boolean addCart(Cart cart) {
 		try
 		{
@@ -35,7 +34,6 @@ public class CartDAOImpl implements CartDAO
 		}
 	}
 	
-	@Override
 	public boolean deleteCart(Cart cart ) {
 		try
 		{
@@ -50,7 +48,6 @@ public class CartDAOImpl implements CartDAO
 		}
 	}
 
-	@Override
 	public boolean updateCart(Cart cart) {
 		try
 		{
@@ -64,7 +61,6 @@ public class CartDAOImpl implements CartDAO
 		}
 	}
 	
-	@Override
 	public  Cart getCartbyId(int cartId)	{
 
 		Session session=sessionFactory.openSession();
@@ -76,7 +72,6 @@ public class CartDAOImpl implements CartDAO
 
 	
 	
-	@Override
 	public List<Cart> retrieveCart(String userName)
 	{
 		Session session=sessionFactory.openSession();

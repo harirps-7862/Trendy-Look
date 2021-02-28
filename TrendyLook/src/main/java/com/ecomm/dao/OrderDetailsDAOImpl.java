@@ -16,7 +16,6 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 	@Autowired
 	SessionFactory sessionFactory;
 
-	@Override
 	public boolean addOrderDetails(OrderDetails order) {
 		try {
 			sessionFactory.getCurrentSession().save(order);
@@ -28,7 +27,6 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 
 	}
 
-	@Override
 	public boolean deleteOrderDetails(OrderDetails order) {
 		try {
 			sessionFactory.getCurrentSession().delete(order);
@@ -40,7 +38,6 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 		}
 	}
 
-	@Override
 	public boolean updateOrderDetails(OrderDetails order) {
 		try {
 			sessionFactory.getCurrentSession().update(order);
@@ -50,7 +47,6 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 		}
 	}
 
-	@Override
 	public OrderDetails getOrderDetails(int orderId) {
 		Session session = sessionFactory.openSession();
 		OrderDetails order = (OrderDetails) session.load(OrderDetails.class, orderId);
@@ -58,7 +54,6 @@ public class OrderDetailsDAOImpl implements OrderDetailsDAO {
 		return order;
 	}
 	
-	@Override
 	public List<OrderDetails> retrieveOrders(){
 		Session session=sessionFactory.openSession();
 		List<OrderDetails> orderList=session.createQuery("from OrderDetails").list();

@@ -19,7 +19,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 	SessionFactory sessionFactory;
 	
 	
-	@Override
 	public boolean addSupplier(Supplier supplier)
 	{
 		try {
@@ -36,7 +35,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 		}
 	}
 	
-	@Override
 	public boolean deleteSupplier(Supplier supplier)
 	{
 		try {
@@ -50,7 +48,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 		
 	}
 	
-	@Override
 	public boolean updateSupplier(Supplier supplier)
 	{
 		try {
@@ -64,7 +61,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 		}
 	}
 	
-	@Override
 	public Supplier getSupplier(int supplierId)
 	{
 		Session session=sessionFactory.openSession();
@@ -73,7 +69,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 		return supplier;
 	}
 	
-	@Override
 	public List<Supplier> retrieveSuppliers()
 	{
 		Session session=sessionFactory.openSession();
