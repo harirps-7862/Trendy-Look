@@ -24,6 +24,5 @@ Technologies : Bootstrap, Java, Spring MVC, Hibernate, JSP, Maven.
 Application Servicer: Apache Tomcat Server.
 Database : MYSQL
 
-ScreenShots:
 
 
